@@ -1,0 +1,28 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% for user in users %}
+<h1>nopely welcomes you, {{user.username}}</h1>
+
+{% endfor %}
+<button id="movie-btn" class="btn waves-effect waves-light" type="submit" name="action">Get Movie</button>
+<a href="{% url 'logout' %}">
+	<button class="btn waves-effect waves-light" type="submit" name="action">Logout
+		<i class="fas fa-sign-in-alt"></i>
+	</button>
+</a>
+<div id="ajax-response"></div>
+
+
+	{% else %}
+		<p>You are not logged in</p>
+		<a href="{% url 'login' %}">login</a> |
+		<a href="{% url 'signup' %}">signup</a>
+	{% endif %}
+{% endblock %}

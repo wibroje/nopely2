@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h5>{{title}}</h5>
+<img src="https://image.tmdb.org/t/p/w500{{poster}}">
+<p>{{overview}}</p>
+{% if items is not None %}
+<p>Wow, this looks really bad! It might not be available online, but you can try <a class="btn" href="{{items}}"><i class="fab fa-searchengin"><b>here!</b></i></a></p>
+{% else %}
+<p>Well, shit, even the internet couldn't find a decent link to this movie. The universe hates you!</p>
+{% endif %}
+{% endblock %}
