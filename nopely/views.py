@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from justwatch import JustWatch
 import json
 
-just_watch = JustWatch(country='US')
+just_watch = JustWatch()
 
 class SignUp(generic.CreateView):
 	form_class = CustomUserCreationForm

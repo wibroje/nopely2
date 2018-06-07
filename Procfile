@@ -1,0 +1,1 @@
+web: gunicorn nopely2.wsgi

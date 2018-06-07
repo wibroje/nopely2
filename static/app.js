@@ -13,9 +13,7 @@ let fantasyGen = 'https://api.themoviedb.org/3/genre/14/movies?api_key=193da3967
 			let title = item.title;
 			let overview = item.overview;
 			let poster = item.poster_path;
-				say(title)
-				say(overview)
-				say(poster)
+
 			$.ajax({
 			    url:"/users/post_movie/",
 			    type: "POST",
@@ -27,7 +25,7 @@ let fantasyGen = 'https://api.themoviedb.org/3/genre/14/movies?api_key=193da3967
 			    	
 			    },
 			    error:function (xhr, textStatus, thrownError){
-			        alert("error");
+			        window.location.href = "/users/home"
 			    }
 			});
 		});
