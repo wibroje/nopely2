@@ -98,3 +98,6 @@ STATICFILES_DIRS = [
 AUTH_USER_MODEL = 'nopely.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+import django_heroku
+django_heroku.settings(locals())
