@@ -6,7 +6,8 @@
   <form method="post" class="signUpForm">
     {% csrf_token %}
     {{ form.as_p }}
-    <button id="submitFormBtn" class="btn waves-effect waves-light black" type="submit" name="action">Submit</button>
+    <br>
+    <button id="submitFormBtn" class="btn waves-effect waves-light red lighten-3" type="submit" name="action">Submit</button>
   </form>
   <div class="empty">
   </div>

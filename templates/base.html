@@ -6,6 +6,7 @@
   <title>nopelyII</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,13 @@
 <body>
 
   <main>
+      <nav id="header" class="nav-extended red lighten-3">
+          <h1 id="nopely-header" class="nav-title">nopely</h1>
+      </nav>
     {% block content %}
     {% endblock %}
+        
+    
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

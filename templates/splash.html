@@ -1,0 +1,35 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<br>
+
+<div class="container">
+	<div class="row">
+		<article id="welcome">
+			<h2>welcome to nopely.</h2>
+				<p>are you looking for a bad movie to watch with your friends?
+					<br>
+					do you not have friends?
+					<br>
+					nopely will not find friends for you, sorry.
+					<br>
+					start your experience by signing up or logging in!
+				</p>
+				
+		</article>
+
+	</div>
+	<div class="row">
+		<div class="col s6">
+			<a href="/users/signup" id="signup-button" ><i class="fa fa-user-plus fa-7x"></i></a>
+		</div>
+		<div class="col s6">
+			<a href="/users/login" id="login-button"><i class="fa fa-sign-in-alt fa-7x"></i></a>
+		</div>
+	</div>
+</div>
+<div class="empty"></div>
+{% endblock %}

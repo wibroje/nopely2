@@ -22,7 +22,7 @@ def home(request):
 
 def logout_view(request):
 	logout(request)
-	return HttpResponseRedirect('/users/login')
+	return HttpResponseRedirect('/')
 
 def post_movie(request):
 	if request.POST:

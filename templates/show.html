@@ -1,16 +1,16 @@
-<!-- templates/home.html -->
-{% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
-
 {% block content %}
-
-<h5>{{title}}</h5>
-<img src="https://image.tmdb.org/t/p/w500{{poster}}">
-<p>{{overview}}</p>
-{% if items is not None %}
-<p>Wow, this looks really bad! It might not be available online, but you can try <a class="btn" href="{{items}}"><i class="fab fa-searchengin"><b>here!</b></i></a></p>
-{% else %}
-<p>Well, shit, even the internet couldn't find a decent link to this movie. The universe hates you!</p>
+<div class="container">
+		<h5>{{title}}</h5>
+		{% if poster is None %}
+		<p class="movie-text">Whoopsie, this movie is so bad it doesn't have a poster!</p>
+		{% else %}
+		<img src="https://image.tmdb.org/t/p/w500{{poster}}" id="movie-poster">
+		{% endif %}
+		<p class="movie-text">{{overview}}</p>
+		{% if items is not None %}
+		<p class="movie-text">wow, this looks really bad! if you're sure you want to watch it, i'll just leave this here..<br><br><a target="_blank" href="{{items}}" class="btn black"><i class="fa fa-video"></i>Go to movie</a></p>
+		{% else %}
+		<p id="not-found-text">well, shit, even the internet couldn't find a decent link to this movie. the universe hates you!</p>
+</div>
 {% endif %}
 {% endblock %}

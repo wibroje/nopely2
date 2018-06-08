@@ -1,0 +1,102 @@
+/*elements*/
+body {
+  text-align: center;
+  background: radial-gradient(gray, black);
+  color: beige;
+}
+
+p {
+  font-size: 2em;
+}
+
+label {
+  color: beige;
+}
+
+input {
+  text-align: center;
+  color: white;
+}
+
+/*classes*/
+.fa {
+  color: beige;
+}
+
+.container {
+  text-align: center;
+}
+
+.empty {
+  height: 10em;
+}
+
+.signUpForm {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.loginForm {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.movie-btn {
+  width: 10em;
+}
+
+/*ids*/
+#nope-logo {
+  width: 8em;
+  padding-top: 1em;
+  margin-top: 1em;
+  border-radius: 25%;
+}
+
+#header {
+  border-bottom-left-radius: 2em;
+  background: radial-gradient(transparent, transparent, salmon);
+}
+
+#footer {
+  border-top-right-radius: 2em;
+  background: radial-gradient(white, transparent, salmon);
+}
+
+#nopely-header {
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px beige;
+  font-family: 'Abel', sans-serif;
+}
+
+#welcome {
+  font-family: 'Abel', sans-serif;
+}
+
+#movie-poster {
+  border-radius: 1em;
+  -moz-box-shadow: 0 0 3em #fff; 
+  -webkit-box-shadow: 0 0 3em #fff;
+  box-shadow: 0px 0px 3em #fff;
+}
+
+#not-found-text {
+  color: red;
+}
+
+/* ********** RESPONSIVE PHONE********** */
+@media screen and (max-width: 425px) {
+
+  #movie-poster {
+    width: 80%;
+  }
+
+  .movie-text {
+    font-size: 1em;
+  }
+
+}
+
