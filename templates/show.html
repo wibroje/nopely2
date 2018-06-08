@@ -1,16 +1,13 @@
 {% block content %}
 <div class="container">
 		<h5>{{title}}</h5>
-		{% if poster is None %}
-		<p class="movie-text">Whoopsie, this movie is so bad it doesn't have a poster!</p>
-		{% else %}
 		<img src="https://image.tmdb.org/t/p/w500{{poster}}" id="movie-poster">
-		{% endif %}
+
 		<p class="movie-text">{{overview}}</p>
 		{% if items is not None %}
 		<p class="movie-text">wow, this looks really bad! if you're sure you want to watch it, i'll just leave this here..<br><br><a target="_blank" href="{{items}}" class="btn black"><i class="fa fa-video"></i>Go to movie</a></p>
 		{% else %}
-		<p id="not-found-text">well, shit, even the internet couldn't find a decent link to this movie. the universe hates you!</p>
+		<p id="not-found-text">this movie is too bad to exist on the internet. the universe hates you, sorry!</p>
 </div>
 {% endif %}
 {% endblock %}
